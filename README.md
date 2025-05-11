@@ -3,7 +3,6 @@ To model the single-stranded RNA structure of SARS-CoV-2 (Covid-19) using parame
 
 Here is the **complete assignment solution** for the SARS-CoV-2 RNA mathematical modeling and visualization task, including well-documented Python code and explanation. A README content is also included for submission.
 
----
 
 ### ✅ **Assignment: SARS-CoV-2 RNA Mathematical Modeling and 3D Visualization**
 
@@ -11,7 +10,6 @@ Here is the **complete assignment solution** for the SARS-CoV-2 RNA mathematical
 
 To model the **single-stranded RNA structure** of SARS-CoV-2 (Covid-19) using parametric mathematical equations and visualize it using Python. The model should also estimate the length of the RNA curve over the interval $0 < t < 3$.
 
----
 
 ### 📌 **Mathematical Model**
 
@@ -33,7 +31,7 @@ Note:
 
 ### 📄 **README Content (For Report Submission)**
 
-```markdown
+
 # SARS-CoV-2 RNA Mathematical Modeling & 3D Visualization
 
 ## Objective
@@ -68,7 +66,6 @@ z(t) = t
 1. Install required packages:
  ```bash
  pip install numpy matplotlib scipy
-
 
 2. Run the Python script in any IDE or notebook environment.
 
