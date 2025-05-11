@@ -25,56 +25,11 @@ Note:
 
 * Convert 90° to radians: $90^\circ = \frac{\pi}{2}$
 
----
-
-### 🧠 **Python Implementation**
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from scipy.integrate import simps
-
-# Define time interval
-t = np.linspace(0, 3, 1000)
-
-# Parametric equations
-x = np.sqrt(8) * np.sqrt((1 - np.cos(2 * t)) / np.sqrt(2))
-y = np.sqrt(8) * np.sin(t + np.pi/2)  # 90 degrees = pi/2 radians
-z = t
-
-# Calculate curve length using arc length formula
-dx = np.gradient(x, t)
-dy = np.gradient(y, t)
-dz = np.gradient(z, t)
-curve_length = simps(np.sqrt(dx**2 + dy**2 + dz**2), t)
-
-print(f"Estimated RNA structure length from t=0 to t=3: {curve_length:.4f} units")
-
-# 3D Line Plot
-fig = plt.figure(figsize=(10, 7))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot(x, y, z, color='red', linewidth=2)
-
-# Labels and View
-ax.set_title("3D Structure of SARS-CoV-2 RNA", fontsize=14)
-ax.set_xlabel("x(t)")
-ax.set_ylabel("y(t)")
-ax.set_zlabel("z(t)")
-ax.grid(True)
-
-plt.tight_layout()
-plt.show()
-```
-
----
-
 ### 📊 **Output**
 
 * **3D continuous line plot** showing RNA path.
 * **Estimated RNA structure length** from $t=0$ to $t=3$ units is displayed in console.
 
----
 
 ### 📄 **README Content (For Report Submission)**
 
@@ -88,13 +43,11 @@ This assignment aims to mathematically model the single-stranded RNA structure o
 - Images obtained from Thermo Fisher Scientific™ TEM and RNA schematics were used to understand the virus structure.
 - The RNA trajectory is modeled using the following parametric equations:
 
-```
 
 x(t) = √8 \* sqrt((1 - cos(2t)) / √2)
 y(t) = √8 \* sin(t + 90°)
 z(t) = t
 
-````
 
 - The Python script:
 - Calculates the coordinates for the RNA model.
@@ -115,7 +68,7 @@ z(t) = t
 1. Install required packages:
  ```bash
  pip install numpy matplotlib scipy
-````
+
 
 2. Run the Python script in any IDE or notebook environment.
 
